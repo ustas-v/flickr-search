@@ -22,3 +22,15 @@ html
             ul.navbar-nav.mr-auto
 
             = render 'shared/search-form'
+
+    br
+
+      .container
+        #flash-container.alert.alert-danger.alert-dismissible.fade.show role="alert"
+          button.close type="button" data-dismiss="alert" aria-label="Закрыть"
+            span aria-hidden="true" &times;
+          span#flash-message
+            strong Ошибка!
+            |  ылвотыыыыслот
+
+        == yield

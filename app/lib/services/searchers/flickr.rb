@@ -20,7 +20,7 @@ module Services::Searchers
       validate_attributes! params
 
       s_key    = search_type == SEARCH_TYPES[:tags] ? 'tags' : 'text'
-      s_params = { s_key => keywords, per_page: 10 }
+      s_params = { s_key => keywords, per_page: PER_PAGE }
 
       client.photos.search s_params
     end
