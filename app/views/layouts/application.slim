@@ -8,3 +8,17 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
   body
+
+    br
+      .container
+        nav.navbar.navbar-toggleable-md.navbar-light.bg-faded
+          button.navbar-toggler.navbar-toggler-right type="button"
+            span.navbar-toggler-icon
+
+          a.navbar-brand href="/"
+            h1 Flickr Search!
+
+          .collapse.navbar-collapse
+            ul.navbar-nav.mr-auto
+
+            = render 'shared/search-form'
