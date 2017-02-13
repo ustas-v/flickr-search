@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    title FlickrSearch
+    = csrf_meta_tags
+
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+  body
+
+    br
+    .container
+      nav.navbar.navbar-toggleable-md.navbar-light.bg-faded
+        button.navbar-toggler.navbar-toggler-right type="button"
+          span.navbar-toggler-icon
+
+        a.navbar-brand href="/"
+          h1 Flickr Search!
+
+        .collapse.navbar-collapse
+          ul.navbar-nav.mr-auto
+
+          = render 'shared/search-form'
+
+    br
+
+    .container
+      #flash-container.alert.alert-danger.alert-dismissible.fade.show role="alert"
+        button.close type="button" aria-label="Закрыть"
+          span aria-hidden="true" &times;
+        span#flash-message
+
+    .container#search-results
+      == yield
