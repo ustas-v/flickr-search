@@ -1,11 +1,11 @@
 = form_tag photos_search_path, method: :get, id: 'search-form', class: 'form-inline', remote: true do
   label.custom-control.custom-radio
-    input.custom-control-input name="search_type" type="radio" checked="checked" value="keywords"
+    input.custom-control-input name="search_type" type="radio" checked="checked" value="#{Services::Searchers::Flickr::SEARCH_TYPES[:keywords]}"
     span.custom-control-indicator
     span.custom-control-description В тексте
 
   label.custom-control.custom-radio
-    input.custom-control-input name="search_type" type="radio" value="tags"
+    input.custom-control-input name="search_type" type="radio" value="#{Services::Searchers::Flickr::SEARCH_TYPES[:tags]}"
     span.custom-control-indicator
     span.custom-control-description Теги
   input.form-control.mr-sm-2 name="keywords" type="text" placeholder="Ключевые слова..."

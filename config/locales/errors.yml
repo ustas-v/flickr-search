@@ -1,0 +1,8 @@
+ru:
+  errors:
+    codes:
+      code_2: '<strong>Ошибка!</strong>  Не заданы обязательные параметры.'
+      code_4: '<strong>Ошибка!</strong>  Не заданы ключевые слова для поиска.'
+      code_6: '<strong>Ошибка!</strong>  Не задана область поиска.'
+      code_8: '<strong>Ошибка!</strong>  Не известна область поиска.'
+    service_unavailable: '<strong>Ошибка!</strong>  Сервис временно недоступен.'

@@ -10,27 +10,26 @@ html
   body
 
     br
-      .container
-        nav.navbar.navbar-toggleable-md.navbar-light.bg-faded
-          button.navbar-toggler.navbar-toggler-right type="button"
-            span.navbar-toggler-icon
+    .container
+      nav.navbar.navbar-toggleable-md.navbar-light.bg-faded
+        button.navbar-toggler.navbar-toggler-right type="button"
+          span.navbar-toggler-icon
 
-          a.navbar-brand href="/"
-            h1 Flickr Search!
+        a.navbar-brand href="/"
+          h1 Flickr Search!
 
-          .collapse.navbar-collapse
-            ul.navbar-nav.mr-auto
+        .collapse.navbar-collapse
+          ul.navbar-nav.mr-auto
 
-            = render 'shared/search-form'
+          = render 'shared/search-form'
 
     br
 
-      .container
-        #flash-container.alert.alert-danger.alert-dismissible.fade.show role="alert"
-          button.close type="button" data-dismiss="alert" aria-label="Закрыть"
-            span aria-hidden="true" &times;
-          span#flash-message
-            strong Ошибка!
-            |  ылвотыыыыслот
+    .container
+      #flash-container.alert.alert-danger.alert-dismissible.fade.show role="alert"
+        button.close type="button" aria-label="Закрыть"
+          span aria-hidden="true" &times;
+        span#flash-message
 
-        == yield
+    .container#search-results
+      == yield

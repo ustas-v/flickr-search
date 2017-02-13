@@ -8,11 +8,11 @@
 //= require_tree ./lib
 //= require_tree ./helpers
 
+//= require searches
+
 namespace('Flickr.App');
 
 $(function()
 {
   Flickr.App.Flash = new Flickr.Lib.FlashMessage($('#flash-container'));
-
-  Flickr.App.Flash.show_success('Test alert message!');
 });

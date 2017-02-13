@@ -10,17 +10,18 @@ module Services::Searchers
       tags:     4
     }
 
-    PER_PAGE = 10
+    PER_PAGE = 20
 
     attribute :keywords,    type: String
     attribute :search_type, type: Integer, default: SEARCH_TYPES[:keywords]
+    attribute :page,        type: Integer, default: 1
 
     def search(params = {})
       assign_attributes params
       validate_attributes! params
 
       s_key    = search_type == SEARCH_TYPES[:tags] ? 'tags' : 'text'
-      s_params = { s_key => keywords, per_page: PER_PAGE }
+      s_params = { s_key => keywords, per_page: PER_PAGE, page: page }
 
       client.photos.search s_params
     end
