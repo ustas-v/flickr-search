@@ -1,14 +1,15 @@
-nav.navbar.navbar-light.bg-faded
-  h1.navbar-brand.mb-0 Найдено: #{number_with_delimiter photos.total, delimiter: ' '}. Показана страница #{photos.page} из #{number_with_delimiter photos.pages, delimiter: ' '}.
+- if photos.present?
+  nav.navbar.navbar-light.bg-faded
+    h1.navbar-brand.mb-0 Найдено: #{number_with_delimiter photos.total, delimiter: ' '}. Показана страница #{photos.page} из #{number_with_delimiter photos.pages, delimiter: ' '}.
 
-br
+  br
 
-.text-center
-  = render partial: 'photo', collection: photos, as: :photo
+  .text-center
+    = render partial: 'photo', collection: photos, as: :photo
 
-br
+  br
 
-nav.navbar.navbar-light.bg-faded
-  = bs_will_paginate photos
+  nav.navbar.navbar-light.bg-faded
+    = bs_will_paginate photos
 
-= render 'modal_photo'
+  = render 'modal_photo'
